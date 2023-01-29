@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block title %}
+Farmer proflile
+{% endblock %}
+{% block main %}
+
+
+<style>
+    img {
+      border: 1px solid #ddd; /* Gray border */
+      border-radius: 4px;  /* Rounded border */
+      padding: 5px; /* Some padding */
+      width: 200px; /* Set a small width */
+      float: right;
+    }
+    
+    /* Add a hover effect (blue shadow) */
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    
+    </style>
+    <body>
+
+    
+    </body>
+</div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"><br/>
+
+
+    <h1 class="display-4 fw-normal" style="color:#F9F3EE"><b><big>Account</big></h1></br/></br/></br/>
+
+
+        
+    <form method="POST">
+    
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <img src="static/farm.jfif" class="img-thumbnail" alt="...">
+    <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="contact" class="form-control" id="contact" placeholder="+91 9123456890">
+      </div>
+      <div class="mb-3">
+        <label for="farmname" class="form-label">Farm name</label>
+        <textarea class="form-control" id="farmname" rows="1" placeholder="Greenberry Farms"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>location</label>
+        <textarea class="form-control" id="location" rows="1" placeholder="T. P.S. Road & III Link Road, Vazira, Borivali, West Mumbai, Maharashtra, 400092"></textarea>
+      </div><br/>
+
+      <button class="btn btn-light" type="submit" value="pickup" name="selling">Pick Up</button></br/>
+
+      <!--<button class="btn btn-dark" type="submit" value="delivery" name="selling" >Delivery</button></br/>
+      
+      <button class="btn btn-light" type="submit" value="both" name="selling">Both</button></br/>-->
+  
+      
+         </form>
+
+     <div>
+
+        <label class="food" style="color:#F9F3EE"> Product Images</p>
+        <img src="static/berry1jfif.jfif" class="berry1">
+        <img src="static/berry2.jfif" class="berry1">
+    </div>
+
+     
+
+</div>
+</br/></br/></br/></br/></br/>
+
+
+
+
+{% endblock %}

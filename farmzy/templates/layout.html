@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+      <link rel="stylesheet" href="static/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock title %} | Farmzy</title>
+
+
+</head>
+
+<body style="background-color:#23272A;">
+  
+
+    <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #7289DA;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/" style="font-family:  Blueberry">Farmzy</a>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              
+        {% if session %}
+            <a class="nav-link active" id="home" href="/">Home</a>
+            <button class="navbar-toggler">
+            </button>
+            
+
+            <a class="nav-link active" id="tasks" href="/logout">logout</a>
+            <button class="navbar-toggler">
+            </button>
+
+            <a class="nav-link active" id="logout" href="/contact">Contact</a>
+            <button class="navbar-toggler">
+            </button>
+
+          {%else %}
+        <a class="nav-link active" id="home" href="/">Home</a>
+        <button class="navbar-toggler">
+        </button>
+
+        <a class="nav-link active" id="tasks" href="/login">login</a>
+        <button class="navbar-toggler">
+        </button>
+
+        <a class="nav-link active" id="logout" href="/contact">Contact</a>
+        <button class="navbar-toggler">
+        </button>
+
+        {% endif %}
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+              </div>
+
+                </ul>
+
+
+            </div>
+        </div>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    {% if session %}
+    {% else %}
+    {% endif %}
+  </body>
+</html>
+    </nav>
+  </body>
+</html>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: #7289DA ;">
+      © 2023 Copyright:
+      <a class="text-dark">Made with love</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>
+
+</html>
