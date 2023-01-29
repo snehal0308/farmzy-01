@@ -35,7 +35,6 @@ oauth.register(
 )
 
 # routes
-# 👆 We're continuing from the steps above. Append this to your server.py file.
 
 @app.route("/login")
 def login():
@@ -43,7 +42,6 @@ def login():
         redirect_uri=url_for("callback", _external=True)
     )
 
-# 👆 We're continuing from the steps above. Append this to your server.py file.
 
 @app.route("/callback", methods=["GET", "POST"])
 def callback():
@@ -52,7 +50,6 @@ def callback():
     return redirect("/select")
 
 
-# 👆 We're continuing from the steps above. Append this to your server.py file.
 
 @app.route("/logout")
 def logout():
@@ -68,8 +65,6 @@ def logout():
             quote_via=quote_plus,
         )
     )
-
-# 👆 We're continuing from the steps above. Append this to your server.py file.
 
 # db for user roles
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
